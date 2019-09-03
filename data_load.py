@@ -19,7 +19,6 @@ class DataFlow(RNGDataFlow):
     def __init__(self, data_path, batch_size):
         self.batch_size = batch_size
         self.wav_files = glob.glob(data_path)
-        print(self.wav_files)
 
     def __call__(self, n_prefetch=1000, n_thread=1):
         df = self

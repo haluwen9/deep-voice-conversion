@@ -7,6 +7,9 @@ import argparse
 import multiprocessing
 import os
 
+from tensorflow.python.util import deprecation
+deprecation._PRINT_DEPRECATION_WARNINGS = False
+
 from tensorpack.callbacks.saver import ModelSaver
 from tensorpack.tfutils.sessinit import SaverRestore
 from tensorpack.train.interface import TrainConfig
@@ -18,7 +21,6 @@ from data_load import Net1DataFlow
 from hparam import hparam as hp
 from models import Net1
 import tensorflow as tf
-
 
 def train(args, logdir):
 
